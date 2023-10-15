@@ -1,14 +1,15 @@
 import React from 'react';
-import AnimatedTextJoiner from '../../components/ScrollText';
+import ParticlesAnimation from '@/components/ParticlesAnimation';
 
 function App() {
-  const textArray = ["T","i","s"," ","i","s"," ","a","n"," ","a","n","i","m","a","t","e","d"," ","t","e","x","t"," ","j","o","i","n","e","r"];
-  const animationDuration = 1000; // 1 second
-
+   
   return (
-    <div className="App">
-      <AnimatedTextJoiner textArray={textArray} animationDuration={animationDuration} jumbleDuration={5} />
-    </div>
+    <>
+    <div className="flex flex-col items-center justify-center min-h-screen py-2 ">
+     Hello
+       </div>
+      
+    </>
   );
 }
 
