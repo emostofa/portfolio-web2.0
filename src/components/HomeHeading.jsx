@@ -1,8 +1,9 @@
 'use client';
 import Image from 'next/image';
 import ima from '../resources/1.png';
-import ScrambleText from './ScrambleText';
 import React, { useState , useEffect } from 'react';
+import Scrambler from './Scrambler';
+import GradientText from './GradientText';
 
 function HomeHeading() {
   const [show, setShow] = useState(true);
@@ -31,9 +32,14 @@ function HomeHeading() {
     </div>
 
     <div className={`transition-all duration-[2000ms] transform ${hide ? 'scale-0' : 'scale-200'}`}>
-      <h1 className={`text-7xl font-bold -mt-72 text-white p-4  rounded-md shadow-lg`}>
-      <ScrambleText text="This is some scrambled text!" scrambleSteps={scrambleSteps} />
-      </h1>
+      {/* <h1 className={`text-7xl font-bold -mt-72 text-white p-4  rounded-md shadow-lg`}>
+        
+      </h1> */}
+      <GradientText>
+
+      <Scrambler text={'Hi There!'} speed={.11} tick={1} scramble={4}  seed={0} chance={0.5} overDrive={126}/>
+      </GradientText>
+      
       
     </div>
     
