@@ -1,16 +1,15 @@
 import React from 'react';
-import ParticlesAnimation from '@/components/ParticlesAnimation';
+import ScrambleText from '../../components/ScrambleText';
+const App = () => {
+ 
 
-function App() {
-   
   return (
-    <>
-    <div className="flex flex-col items-center justify-center min-h-screen py-2 ">
-     Hello
-       </div>
+    <h1 className="flex flex-col items-center text-6xl justify-center min-h-screen w-full">
+
+      <ScrambleText text="Hello!!" jumbleDuration={1000} descrambleDuration={6000} delay={200}  />
+    </h1>
       
-    </>
   );
-}
+};
 
 export default App;

@@ -31,18 +31,7 @@ export default function Navbar() {
                     Home
                 </a>
 
-                <a className="flex text-gray-600 
-                    cursor-pointer transition-colors duration-300
-                    font-semibold text-blue-600">
-                    Themes
-                </a>
-
-                <a className="flex text-gray-600 hover:text-blue-500
-                    cursor-pointer transition-colors duration-300">
-                    Developers
-                </a>
-
-              
+        
 
                 <a className="flex text-gray-600 hover:text-blue-500
                     cursor-pointer transition-colors duration-300">
