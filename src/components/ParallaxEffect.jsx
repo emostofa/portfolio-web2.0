@@ -1,46 +1,33 @@
-import { ParallaxBanner } from "react-scroll-parallax";
+'use client';
+import React, { useEffect } from 'react';
 
-export const AdvancedBannerTop = () => {
-  const background = {
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-background.jpg",
-    translateY: [0, 50],
-    opacity: [1, 0.3],
-    scale: [1.05, 1, "easeOutCubic"],
-    shouldAlwaysCompleteAnimation: true
-  };
+const ParallaxEffect = ({children}) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const parallaxElements = document.querySelectorAll('.parallax-text');
 
-  const headline = {
-    translateY: [0, 30],
-    scale: [1, 1.05, "easeOutCubic"],
-    shouldAlwaysCompleteAnimation: true,
-    expanded: false,
-    children: (
-      <div className="inset center">
-        <h1 className="headline white">Hello World!</h1>
-      </div>
-    )
-  };
+      parallaxElements.forEach((element) => {
+        const scrollY = window.scrollY;
+        const parallaxFactor = element.getAttribute('data-parallax-factor');
+        const translateY = -scrollY * parallaxFactor;
+        element.style.transform = `translateY(${translateY}px)`;
+      });
+    };
 
-  const foreground = {
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/105988/banner-foreground.png",
-    translateY: [0, 15],
-    scale: [1, 1.1, "easeOutCubic"],
-    shouldAlwaysCompleteAnimation: true
-  };
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
 
-  const gradientOverlay = {
-    opacity: [0, 1, "easeOutCubic"],
-    shouldAlwaysCompleteAnimation: true,
-    expanded: false,
-    children: <div className="gradient inset" />
-  };
+    // Remove the listener when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
-    <ParallaxBanner
-      layers={[background, headline, foreground, gradientOverlay]}
-      className="full"
-    />
+    <div className="parallax-text">
+      {children}
+    </div>
   );
 };
+
+export default ParallaxEffect;

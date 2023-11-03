@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-
+import imagesDir from '../resources/1.png';
 const LogoContainer = styled.div`
   display: flex;
   overflow: hidden;
@@ -26,10 +26,9 @@ const moveLeft = keyframes`
 const TechTicker = () => {
   return (
     <LogoContainer>
-      <Logo src="/images/logo1.png" alt="Logo 1" />
-      <Logo src="/images/logo2.png" alt="Logo 2" />
-      <Logo src="/images/logo3.png" alt="Logo 3" />
-      {/* Add more logos here */}
+      <Logo src={imagesDir} alt="Logo" />
+      <Logo src={imagesDir} alt="Logo" />
+      <Logo src={imagesDir} alt="Logo" />
     </LogoContainer>
   );
 };

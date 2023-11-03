@@ -1,24 +1,21 @@
 
-import HomeHeading from "@/components/HomeHeading"
+import HomeView from "@/components/HomeView";
+import Navbar from "@/components/Navbar";
 
-import ParticlesAnimation from "@/components/ParticlesAnimation"
 
-import Navbar from "@/components/navbar"
-import Image from "next/image"
 
 export default function Home() {
+  
   return (
-    <>
-    <Navbar></Navbar>
- <div className="flex flex-col items-center justify-center min-h-screen">
-    <ParticlesAnimation>
-
-
-    </ParticlesAnimation>
     
-    <HomeHeading></HomeHeading>
-    </div>
+  <>
 
-    </>
+  <Navbar/>
+  <HomeView/>
+  
+  </>
+
+    
+  
   )
 }

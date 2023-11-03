@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 // Define a keyframe animation for the gradient effect
-const gradientAnimation = keyframes`
+
+function GradientText({children, styling, gradient}) {
+  const gradientAnimation = keyframes`
   0% {
     background-position: 0% 50%;
   }
@@ -16,20 +18,21 @@ const gradientAnimation = keyframes`
 `;
 
 // Create a styled component with the gradient animation
+// background: linear-gradient(90deg, #2193b0,#f89ca8, #74dddd  );
+
 const GradientTextAnimated = styled.span`
-  font-size: 6rem;
-  font-weight: bold;
-  background: linear-gradient(90deg, #2193b0,#f89ca8, #74dddd  );
+
+  
+  background: linear-gradient(90deg, ${gradient});
   background-clip: text;
   -webkit-background-clip: text;
-  color: transparent;
+  
   background-size: 200% 100%;
   animation: ${gradientAnimation} 5s linear infinite;
 `;
 
-function GradientText({children}) {
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className={styling}>
       <GradientTextAnimated >
         {children}
       </GradientTextAnimated>

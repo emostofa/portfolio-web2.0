@@ -1,25 +1,26 @@
+
 import React from 'react'
+import Scrambler from './Scrambler'
 
 export default function Navbar() {
   return (
     <>
 
-<div className="flex flex-col items-center justify-center mt-32"  x-data="appData()" x-init="appInit()">
+<div className="flex flex-col items-center justify-center mt-28 "  x-data="appData()" x-init="appInit()">
     <div className="flex flex-col">
       
-        <div className="fixed inset-x-0 top-0 z-50 h-0.5 mt-0.5 bg-blue-500"></div>
-
+       
         {/* <!-- Navbar --> */}
-        <nav className="flex justify-around py-4 bg-white/80
-            backdrop-blur-md shadow-md w-full
-            fixed top-0 left-0 right-0 z-10">
+        <nav className="flex justify-around py-4 backdrop-blur-md fixed top-0 left-0 right-0 z-10">
+  
+
 
             {/* <!-- Logo Container --> */} 
             <div className="flex items-center">
                 {/* <!-- Logo --> */}
-                <a className="cursor-pointer" target='_blank' rel="noreferrer" href="https://github.com/emostofa" >
+                <a className="cursor-pointer"  rel="noreferrer" href="/" >
                     <h3 className="text-2xl font-medium text-blue-500">
-                        Mostofa D.
+                        <Scrambler texts={['Mostofa D.']}  speed={.7} tick={1} scramble={4}  seed={0} chance={0.5} overDrive={35}/>
                          </h3>
                 </a>
             </div>
