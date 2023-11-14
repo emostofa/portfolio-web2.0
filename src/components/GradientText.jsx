@@ -11,7 +11,7 @@ function GradientText({children, styling, gradient}) {
   50% {
     background-position: 100% 50%;
   }
-  100% {
+  100% { 
     background-position: 0% 50%;
   }
 `;
@@ -22,7 +22,7 @@ function GradientText({children, styling, gradient}) {
 const GradientTextAnimated = styled.span`
 
   
-  background: linear-gradient(90deg, ${gradient?? '#2193b0,#f89ca8, #74dddd  '});
+  background: linear-gradient(90deg, ${gradient?? '#fff,#fff,#fff  '});
   background-clip: text;
   -webkit-background-clip: text;
   

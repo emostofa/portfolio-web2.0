@@ -3,7 +3,7 @@ import React from 'react';
 import { useRef, useState } from 'react';
 import { useScramble } from 'use-scramble';
 
-export default function Scrambler({delay, texts, speed, tick, step, scramble, seed, chance, overDrive,styling}) {
+export default function Scrambler({delay, texts, speed, tick, step, scramble, seed, chance, overDrive,styling, replayM}) {
   const [index, setIndex] = useState(0);
   const loopRef = useRef();
 
@@ -30,7 +30,7 @@ export default function Scrambler({delay, texts, speed, tick, step, scramble, se
     },
       });
   return (
-    <p className={styling} onMouseOver={replay}  ref={ref} onClick={replay} onFocus={replay} />
+    <p className={styling} onMouseOver={replayM?replayM:replay}  ref={ref} onClick={replay} onFocus={replay} />
   )
 }
 
