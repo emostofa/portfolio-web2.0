@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <>
 
-<div className="flex flex-col items-center justify-center mt-28 "  x-data="appData()" x-init="appInit()">
+<div className="flex flex-col items-center justify-center mt-4 "  x-data="appData()" x-init="appInit()">
     <div className="flex flex-col">
       
        

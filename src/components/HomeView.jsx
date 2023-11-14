@@ -15,20 +15,19 @@ export default function HomeView() {
   return (
     <>
       {/* 1st section */}
-      <div className="flex flex-col  items-center justify-center text-white bg-[url('/bg-4.png')] bg-fixed bg-cover bg-center h-screen ">
+      <div className="flex flex-col  items-center justify-center text-white h-screen ">
         <Experi
-          backgroundImage={"/bg-4.png"}
           text={"Hi there! <br/>"}
           image={"/avatar.svg"}
           styling={
-            "text-4xl md:text-8xl text-transparent font-thin flex items-center justify-center"
+            "text-4xl md:text-8xl text-transparent flex items-center justify-center"
           }
           imageStyling={" flex items-center   "}
           gradient={"#fff,#000,#fa4"}
         >
           <GradientText
             styling={
-              "text-4xl md:text-8xl text-transparent font-thin flex items-end justify-center"
+              "text-4xl md:text-8xl text-transparent flex items-end justify-center"
             }
             gradient={"#fff,#000,#fa4"}
           >
@@ -48,13 +47,13 @@ export default function HomeView() {
 
       {/* 2nd section */}
 
-      <div className="flex flex-col  items-center justify-center text-white bg-[url('/bg-4.png')] bg-fixed bg-cover bg-center ">
-        <h2 className="text-3xl md:text-6xl   font-thin">
+      <div className="flex flex-col  items-center justify-center text-white bg-[url('/self3.1.png')] bg-fixed bg-[length:25rem]  bg-no-repeat bg-[55rem_6rem] bg-contain h-screen  ">
+        <h2 className="text-3xl md:text-6xl md:leading-loose  font-thin">
           Let me <span className="text-blue-400">introduce</span> Myself
         </h2>
-        <div className=" flex w-full items-center justify-around">
-          <div className="w-1/3">
-            <h1 className="text-2xl md:text-4xl   font-thin">{nameTitle}</h1>
+        <div className=" flex w-full items-center justify-left">
+          <div className="w-1/2 px-16">
+            <h1 className="text-2xl md:text-4xl">{nameTitle}</h1>
             <Scrambler
               styling="text-2xl md:text-3xl   font-thin"
               texts={introText}
@@ -85,7 +84,7 @@ export default function HomeView() {
           </div>
       
           <div>
-            <img src="/self3.1.png" height={300} width={300} className="w-[10rem] md:w-[25rem]" alt="self" />
+            {/* <img src="/self3.1.png" height={300} width={300} className="w-[10rem] md:w-[25rem]" alt="self" /> */}
           </div>
         </div>
       </div>

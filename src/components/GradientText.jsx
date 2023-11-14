@@ -1,5 +1,4 @@
-'use client';
-import React, { useState } from 'react';
+
 import styled, { keyframes } from 'styled-components';
 
 // Define a keyframe animation for the gradient effect
@@ -23,7 +22,7 @@ function GradientText({children, styling, gradient}) {
 const GradientTextAnimated = styled.span`
 
   
-  background: linear-gradient(90deg, ${gradient});
+  background: linear-gradient(90deg, ${gradient?? '#2193b0,#f89ca8, #74dddd  '});
   background-clip: text;
   -webkit-background-clip: text;
   
