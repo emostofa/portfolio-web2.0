@@ -11,7 +11,7 @@ export default function HomeView() {
     "A SQA Engineer",
     "A Web Developer",
   ];
-  const nameTitle = "I'm Mostafa Dhali Emon";
+  const nameTitle = "I'm Mostofa Dhali Emon";
   return (
     <>
       {/* 1st section */}

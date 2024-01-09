@@ -2,9 +2,7 @@
 import styled, { keyframes } from 'styled-components';
 
 // Define a keyframe animation for the gradient effect
-
-function GradientText({children, styling, gradient}) {
-  const gradientAnimation = keyframes`
+const gradientAnimation = keyframes`
   0% {
     background-position: 0% 50%;
   }
@@ -15,6 +13,8 @@ function GradientText({children, styling, gradient}) {
     background-position: 0% 50%;
   }
 `;
+function GradientText({children, styling, gradient}) {
+  
 
 // Create a styled component with the gradient animation
 // background: linear-gradient(90deg, #2193b0,#f89ca8, #74dddd  );
