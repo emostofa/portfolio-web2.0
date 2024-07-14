@@ -1,4 +1,4 @@
-
+import React, { useState, useEffect } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 // Define a keyframe animation for the gradient effect

@@ -1,6 +1,7 @@
-
+'use client'
 import React from 'react'
 import Scrambler from './Scrambler'
+import GradientText from './GradientText'
 
 export default function Navbar() {
   return (
@@ -19,9 +20,13 @@ export default function Navbar() {
             <div className="flex items-center">
                 {/* <!-- Logo --> */}
                 <a className="cursor-pointer"  rel="noreferrer" href="/" >
-                    <h3 className="text-2xl font-medium text-blue-500">
+                    <GradientText styling={
+        "text-xl md:text-xl text-transparent  flex items-center justify-center"
+      }
+      gradient={"#2c3e50 ,#4ca1af  "}>
+
                         <Scrambler texts={['Mostofa D.']}  speed={.7} tick={1} scramble={4}  seed={0} chance={0.5} overDrive={35}/>
-                         </h3>
+                         </GradientText>
                 </a>
             </div>
 
