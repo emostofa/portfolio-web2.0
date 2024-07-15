@@ -25,7 +25,7 @@ export default function SecondSection({ name }) {
           <div className="md:w-1/2 w-full p-5 md:p-6 lg:p-8 ">
 
             <div className="flex items-center">
-              <h1 className="text-2xl md:text-4xl lg:text-6xl text-gray-500 font-light">I'm {nameTitle}</h1>
+              <h1 className="text-2xl md:text-4xl lg:text-6xl text-gray-500 font-light">I&apos;m {nameTitle}</h1>
               <img src="/pngegg.png" alt="profile" className="mt-4 w-5 h-5 rounded-full ml-4" />
             </div>
 
